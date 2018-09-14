@@ -20,6 +20,10 @@ EthernetClient::EthernetClient() : _sock(MAX_SOCK_NUM) {
 EthernetClient::EthernetClient(uint8_t sock) : _sock(sock) {
 }
 
+uint8_t EthernetClient::getSocketNumber() {
+  return _sock;
+}
+
 int EthernetClient::connect(const char* host, uint16_t port) {
   // Look up the host first
   int ret = 0;

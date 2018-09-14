@@ -11,6 +11,7 @@ public:
   EthernetClient();
   EthernetClient(uint8_t sock);
 
+  uint8_t getSocketNumber();
   uint8_t status();
   virtual int connect(IPAddress ip, uint16_t port);
   virtual int connect(const char *host, uint16_t port);
